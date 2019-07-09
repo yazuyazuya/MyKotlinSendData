@@ -6,12 +6,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.app.Activity
 import android.content.Intent
-import android.util.Log
 import android.widget.TextView
 
 class SubActivity : AppCompatActivity() {
 
-    //    var message = "No Message"
     lateinit var message: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +32,8 @@ class SubActivity : AppCompatActivity() {
             val intentSub = Intent()
 
             if (editText.text != null) {
-                val str = message + editText.text.toString()
+                // val str = message + editText.text.toString()
+                val str = editText.text.toString()
                 intentSub.putExtra(MainActivity.EXTRA_MESSAGE, str)
 
                 editText.setText("")
